@@ -4,7 +4,7 @@
 
 ## ✔️ 3.1 connectivity_plus [📂 (source)](https://github.com/Zimil-Patel/adv_flutter_ch3/tree/master/lib/3.1_connectivity_plus/view)
 
-## Connectivity Plus Package Documentation for GitHub
+### Connectivity Plus Package Documentation for GitHub
 
 ### Overview
 The `connectivity_plus` package is a Flutter plugin that provides a way to check the network connectivity status of the device. This package supports checking for connectivity to mobile data and WiFi networks, and allows listening for changes in connectivity status.
