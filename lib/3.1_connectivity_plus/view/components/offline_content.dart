@@ -85,6 +85,9 @@ class NoInternetMessage extends StatelessWidget {
                   'no internet connection.\ncheck your network and try again.',
                   style: TextStyle(
                       fontSize: 16, fontWeight: FontWeight.w400)),
+              SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),
