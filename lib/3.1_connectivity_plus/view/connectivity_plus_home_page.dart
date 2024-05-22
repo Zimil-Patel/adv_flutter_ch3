@@ -8,9 +8,7 @@ class ConnectivityPlusHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ConnectivityPage(
-        
-      ),
+      home: ConnectivityPage(),
     );
   }
 }
