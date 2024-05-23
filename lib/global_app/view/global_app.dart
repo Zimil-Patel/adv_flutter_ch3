@@ -1,6 +1,7 @@
 import 'package:adv_flutter_ch3/constants.dart';
-import 'package:adv_flutter_ch3/globla_app/view/components/list_wheel_scroll_view.dart';
 import 'package:flutter/material.dart';
+
+import 'components/list_wheel_scroll_view.dart';
 
 class GlobalApp extends StatelessWidget {
   const GlobalApp({super.key});

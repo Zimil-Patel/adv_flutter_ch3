@@ -1,6 +1,7 @@
-import 'package:adv_flutter_ch3/globla_app/utils/app_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../../../app_list.dart';
 
 class ListScrollView extends StatelessWidget {
   const ListScrollView({
