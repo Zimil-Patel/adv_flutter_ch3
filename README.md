@@ -114,7 +114,113 @@ https://github.com/Zimil-Patel/adv_flutter_ch3/assets/112332000/f012e855-9b91-45
 
 ## ✔️ 3.2 Chrome : flutter_inappwebview Package [📂 (source)](https://github.com/Zimil-Patel/adv_flutter_ch3/tree/master/lib/3.2_flutter_inappwebview)
 
+# flutter_inappwebview
 
+`flutter_inappwebview` is a Flutter package that allows you to embed WebView widgets into your Flutter application with ease. It provides a comprehensive set of features and functionalities, enabling you to control web content dynamically.
+
+## Installation
+
+Run `flutter pub get` to install the package.
+
+## Usage
+
+Here's a simple example demonstrating how to use `InAppWebView` and control it using its methods: `goBack`, `goForward`, `reload`, and `loadUrl`.
+
+### Example
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: WebViewExample(),
+    );
+  }
+}
+
+class WebViewExample extends StatefulWidget {
+  @override
+  _WebViewExampleState createState() => _WebViewExampleState();
+}
+
+class _WebViewExampleState extends State<WebViewExample> {
+  late InAppWebViewController _webViewController;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('InAppWebView Example'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              _webViewController.goBack();
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.arrow_forward),
+            onPressed: () {
+              _webViewController.goForward();
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.refresh),
+            onPressed: () {
+              _webViewController.reload();
+            },
+          ),
+        ],
+      ),
+      body: InAppWebView(
+        initialUrlRequest: URLRequest(url: Uri.parse("https://flutter.dev")),
+        onWebViewCreated: (controller) {
+          _webViewController = controller;
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.open_in_browser),
+        onPressed: () {
+          _webViewController.loadUrl(
+            urlRequest: URLRequest(url: Uri.parse("https://pub.dev")),
+          );
+        },
+      ),
+    );
+  }
+}
+```
+
+### Methods
+
+- **goBack**: Navigates back in the webview's history.
+  ```dart
+  _webViewController.goBack();
+  ```
+
+- **goForward**: Navigates forward in the webview's history.
+  ```dart
+  _webViewController.goForward();
+  ```
+
+- **reload**: Reloads the current URL.
+  ```dart
+  _webViewController.reload();
+  ```
+
+- **loadUrl**: Loads a new URL.
+  ```dart
+  _webViewController.loadUrl(
+    urlRequest: URLRequest(url: Uri.parse("https://pub.dev")),
+  );
+  ```
 
 ### Screenshots 📷
 
