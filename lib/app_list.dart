@@ -9,7 +9,7 @@ List<AppModel> appList = [
     widget: const ConnectivityPlusHomePage(),
   ),
   AppModel(
-    title: '3.2 3.2 Chrome : flutter_inappwebview Package',
+    title: '3.2 Chrome : flutter_inappwebview Package',
     widget: const InAppWebViewHomePage(),
   ),
 ];
